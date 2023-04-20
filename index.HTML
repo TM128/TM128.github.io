@@ -1,0 +1,202 @@
+<h1>Welcome to my webpage!</h1>
+<h2>Talal Malhi</h2>
+<a href="https://www.linkedin.com/in/talal-malhi/">Linkedin</a>
+<a href="mailto:talal.malhi128@gmail.com">Send Email</a>
+<meta property="og:url" content="https://talalweb.com">
+<tag>
+    HI EVERYONE! Thank you so much for viewing my website, this was a project that took
+    me over 3 months to complete! I hope your enjoy it :D  
+</tag>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Talal Malhi's Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f5f5f5;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 20px;
+			text-align: center;
+			position: relative;
+			margin-bottom: 30px;
+		}
+
+		h1 {
+			font-size: 48px;
+			font-weight: bold;
+			margin: 0;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+		}
+
+
+		h2 {
+			font-size: 24px;
+			font-weight: italic;
+			margin: 0;
+			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+		}
+
+		@keyframes glitch {
+			0% {
+				transform: skew(0);
+				opacity: 1;
+			}
+			20% {
+				transform: skew(-20deg);
+				opacity: 0.8;
+			}
+			40% {
+				transform: skew(20deg);
+				opacity: 0.8;
+			}
+			60% {
+				transform: skew(-20deg);
+				opacity: 0.8;
+			}
+			80% {
+				transform: skew(20deg);
+				opacity: 0.8;
+			}
+			100% {
+				transform: skew(0);
+				opacity: 1;
+			}
+		}
+
+		.container {
+			max-width: 1200px;
+			margin: 0 auto;
+			padding: 0 20px;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.btn {
+			display: inline-block;
+			padding: 10px;
+			border-radius: 5px;
+			margin: 10px;
+			transition: all 0.2s ease-in-out;
+			text-align: center;
+			width: 150px;
+			height: 50px;
+			line-height: 50px;
+			color: #fff;
+			font-size: 20px;
+			font-weight: bold;
+			text-decoration: none;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+		}
+
+		.btn:hover {
+			transform: translateY(-5px);
+			box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+		}
+		body {
+        background-color: #f2f2f2;
+      }
+      h1 {
+        color: #4d4d4d;
+      }
+      input {
+        width: 100%;
+        padding: 10px;
+        font-size: 24px;
+        border-radius: 5px;
+        border: none;
+        margin-bottom: 10px;
+      }
+      button {
+        background-color: #4d4d4d;
+        color: #f2f2f2;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 20px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #f2f2f2;
+        color: #4d4d4d;
+      }
+      button:active {
+        transform: translateY(2px);
+      }
+      button:focus {
+        outline: none;
+      }
+      #clear {
+        background-color: #f44336;
+        color: #f2f2f2;
+      }
+      #equal {
+        background-color: #008CBA;
+        color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <input type="text" id="result" />
+    <br />
+    <br />
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <br />
+    <button onclick="calculate('7')">7</button>
+    <button onclick="calculate('8')">8</button>
+    <button onclick="calculate('9')">9</button>
+    <br />
+    <button onclick="calculate('4')">4</button>
+    <button onclick="calculate('5')">5</button>
+    <button onclick="calculate('6')">6</button>
+    <br />
+    <button onclick="calculate('1')">1</button>
+    <button onclick="calculate('2')">2</button>
+    <button onclick="calculate('3')">3</button>
+    <br />
+    <button onclick="calculate('0')">0</button>
+    <button onclick="calculate('.')">.</button>
+    <button onclick="clearResult()" id="clear">Clear</button>
+    <br />
+    <button onclick="calculate('=')" id="equal">=</button>
+    <script>
+        function calculate(value) {
+          var result = document.getElementById("result");
+      
+          if (value === "=") {
+            result.value = eval(result.value);
+          } else if (value === "c") {
+            result.value = "";
+          } else {
+            result.value += value;
+          }
+        }
+      
+        function clearResult() {
+          var result = document.getElementById("result");
+          result.value = "";
+        }
+      </script>
+      
+	</style>
+</head>
+<body>
+	<header>
+
+    
