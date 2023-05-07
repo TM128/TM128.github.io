@@ -1,202 +1,165 @@
 <!DOCTYPE html>
 <html>
-<h1>Welcome to my webpage!</h1>
-<h2>Talal Malhi</h2>
-<a href="https://www.linkedin.com/in/talal-malhi/">Linkedin</a>
-<a href="mailto:talal.malhi128@gmail.com">Send Email</a>
-<meta property="og:url" content="https://talalweb.com">
-<tag>
-    HI EVERYONE! Thank you so much for viewing my website, this was a project that took
-    me over 3 months to complete! I hope your enjoy it :D  
-</tag>
-
 <head>
 	<title>Talal Malhi's Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style>
 		body {
+			background-color: #f5f5f5;
 			font-family: Arial, sans-serif;
 			margin: 0;
 			padding: 0;
-			background-color: #f5f5f5;
 		}
 
+		* {
+			margin: 0;
+			padding: 0;
+			font-family: 'Poppins', sans-serif;
+			box-sizing: border-box;
+		}
 		header {
-			background-color: #333;
+			background-color: #1E90FF;
 			color: #fff;
 			padding: 20px;
 			text-align: center;
-			position: relative;
 			margin-bottom: 30px;
 		}
-
 		h1 {
 			font-size: 48px;
 			font-weight: bold;
 			margin: 0;
-			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+			color: #0077be;
+			text-shadow: 4px 2px 5px rgba(75, 3, 75, 0.53);
+			
 		}
-
-
 		h2 {
 			font-size: 24px;
 			font-weight: italic;
 			margin: 0;
-			text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+			color: #6A5ACD;
+			text-shadow: 2px 2px 5px rgba(0, 128, 255, 0.5);
 		}
-
-		@keyframes glitch {
-			0% {
-				transform: skew(0);
-				opacity: 1;
-			}
-			20% {
-				transform: skew(-20deg);
-				opacity: 0.8;
-			}
-			40% {
-				transform: skew(20deg);
-				opacity: 0.8;
-			}
-			60% {
-				transform: skew(-20deg);
-				opacity: 0.8;
-			}
-			80% {
-				transform: skew(20deg);
-				opacity: 0.8;
-			}
-			100% {
-				transform: skew(0);
-				opacity: 1;
-			}
-		}
-
-		.container {
-			max-width: 1200px;
-			margin: 0 auto;
-			padding: 0 20px;
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-		}
-
-		.btn {
-			display: inline-block;
-			padding: 10px;
-			border-radius: 5px;
-			margin: 10px;
-			transition: all 0.2s ease-in-out;
-			text-align: center;
-			width: 150px;
-			height: 50px;
-			line-height: 50px;
-			color: #fff;
-			font-size: 20px;
+		a {
+			color: #0077be;
 			font-weight: bold;
 			text-decoration: none;
-			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+			transition: color 0.2s ease-in-out;
+		}
+		a:hover {
+			color: #008080;
+		}
+		.tag {
+			color: #1E90FF;
+			font-weight: bold;
+		}
+			.menu-item {
+		display: inline-block;
+		padding: 10px 20px;
+		background-color: #fff;
+		color: #000;
+		font-weight: bold;
+		transition: background-color 0.3s ease, color 0.3s ease;
 		}
 
-		.btn:hover {
-			transform: translateY(-5px);
-			box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+		.menu-item:hover {
+		background-color: #0077be;
+		color: #fff;
 		}
-		body {
-        background-color: #f2f2f2;
-      }
-      h1 {
-        color: #4d4d4d;
-      }
-      input {
-        width: 100%;
-        padding: 10px;
-        font-size: 24px;
-        border-radius: 5px;
-        border: none;
-        margin-bottom: 10px;
-      }
-      button {
-        background-color: #4d4d4d;
-        color: #f2f2f2;
-        padding: 10px 20px;
-        border-radius: 5px;
-        border: none;
-        font-size: 20px;
-        margin-right: 5px;
-        margin-bottom: 5px;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #f2f2f2;
-        color: #4d4d4d;
-      }
-      button:active {
-        transform: translateY(2px);
-      }
-      button:focus {
-        outline: none;
-      }
-      #clear {
-        background-color: #f44336;
-        color: #f2f2f2;
-      }
-      #equal {
-        background-color: #008CBA;
-        color: #f2f2f2;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Calculator</h1>
-    <input type="text" id="result" />
-    <br />
-    <br />
-    <button onclick="calculate('+')">+</button>
-    <button onclick="calculate('-')">-</button>
-    <button onclick="calculate('*')">*</button>
-    <button onclick="calculate('/')">/</button>
-    <br />
-    <button onclick="calculate('7')">7</button>
-    <button onclick="calculate('8')">8</button>
-    <button onclick="calculate('9')">9</button>
-    <br />
-    <button onclick="calculate('4')">4</button>
-    <button onclick="calculate('5')">5</button>
-    <button onclick="calculate('6')">6</button>
-    <br />
-    <button onclick="calculate('1')">1</button>
-    <button onclick="calculate('2')">2</button>
-    <button onclick="calculate('3')">3</button>
-    <br />
-    <button onclick="calculate('0')">0</button>
-    <button onclick="calculate('.')">.</button>
-    <button onclick="clearResult()" id="clear">Clear</button>
-    <br />
-    <button onclick="calculate('=')" id="equal">=</button>
-    <script>
-        function calculate(value) {
-          var result = document.getElementById("result");
-      
-          if (value === "=") {
-            result.value = eval(result.value);
-          } else if (value === "c") {
-            result.value = "";
-          } else {
-            result.value += value;
-          }
-        }
-      
-        function clearResult() {
-          var result = document.getElementById("result");
-          result.value = "";
-        }
-      </script>
-      
+
+
+		@media only screen and (max-width: 768px) {
+			h1 {
+				font-size: 36px;
+			}
+			h2 {
+				font-size: 20px;
+			}
+		}
+		footer {
+			background-color: #f5f5f5;
+			padding: 20px;
+			text-align: center;
+			margin-top: 30px;
+		}
+		.social-icons {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 10px;
+		}
+		.social-icons img {
+			height: 30px;
+			margin: 0 10px;
+		}
+		.footer-links {
+			display: flex;
+			justify-content: center;
+		}
+		.footer-links a {
+			margin: 0 10px;
+			color: #666;
+			font-size: 14px;
+			text-decoration: none;
+		}
+		.gif-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 300px;
+		}
+		.gif {
+			height: 300px;
+		}
 	</style>
 </head>
 <body>
 	<header>
+		<h1>Welcome to my webpage!</h1>
+		<h2>Talal Malhi</h2>
+	</header>
+	<main>
+		<p class="tag">Hi everyone! Thank you so much for visiting my website. This was a project that took me over 3 months to complete! I hope you enjoy it :D</p>
+	</main>
+	<footer>
+		<div class="footer-container">
+			<div class="gif-container">
+				<img class="gif" alt="Mario" src="https://cloudinary.com/blog/wp-content/uploads/sites/12/2022/02/Mario_1.gif"/>
+			</div>
+			<div class="social-icons">
+				<a href="https://www.linkedin.com/in/talal-malhi/"><img src="C:\Users\Talal\Downloads\linkedin.png" alt="Linkedin"></a>
+				<a href="mailto:talal.malhi128@gmail.com"><img src="C:\Users\Talal\Downloads\email.png" alt="Email"></a>
+				</div>
+				<div class="footer-links">
+				<a href="file:///C:/Users/Talal/Desktop/Personal%20Talal%20Projects/cool.html">Privacy Policy</a>
+				<a href="file:///C:/Users/Talal/Desktop/Personal%20Talal%20Projects/cool.html">Terms of Use</a>
+				<a href="file:///C:/Users/Talal/Desktop/Personal%20Talal%20Projects/cool.html">FAQ</a>
+				<nav>
+					<ul class="menu">
+					  <li class="menu-item"><a href="project.html">Project</a></li>
+					  <li class="menu-item"><a href="about.html">About Me</a></li>
+					  <li class="menu-item"><a href="contact.html">Contact Me</a></li>
+					  <li class="menu-item"><a href="file:///C:/Users/Talal/Desktop/Personal%20Talal%20Projects/cool.html">Privacy Policy</a></li>
+					  <li class="menu-item"><a href="file:///C:/Users/Talal/Desktop/Personal%20Talal%20Projects/cool.html">Terms of Use</a></li>
+					  <li class="menu-item"><a href="file:///C:/Users/Talal/Desktop/Personal%20Talal%20Projects/cool.html">FAQ</a></li>
+					</ul>
+				  </nav>		
+				
+				  <div class="box">
+					<div class="imgBx">
+						<img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjMyZDhjMzE3MTBhZDMzZjQ4NDc4ODdhZWQ5YTYyMjI1ZGIyNGRjZiZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/S60CrN9iMxFlyp7uM8/giphy.gif">
+						</div><div>
+							<div class="content">
+							<h3> ChatBot <br><span>Talk to Chatbot For Amazing Instant Physics & Math Help! </span></h3>
+							</div>
+							
+						</div>
+					</div>
+				  </div>
 
-    
+				</div>
+				</div>
+				</footer>
+				
+				</body>
+				</html>
+				
